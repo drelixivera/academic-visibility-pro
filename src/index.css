@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-navy: #0B192C;
+  --accent-gold: #D4AF37;
+  --text-muted: #6c757d;
+}
+
+.bg-navy {
+  background-color: var(--primary-navy) !important;
+}
+
+.text-gold {
+  color: var(--accent-gold) !important;
+}
