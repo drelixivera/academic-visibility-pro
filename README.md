@@ -1,16 +1,32 @@
-# React + Vite
+# Academic Visibility Pro 🎓✈️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, highly responsive consulting landing page built for **Academic Visibility Pro**. This platform is strategically engineered to showcase specialized profile-building services for researchers, scholars, and high-achieving global professionals pursuing elite US immigration pathways, specifically **EB-1A (Einstein Visa)** and **EB-2 NIW (National Interest Waiver)**.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+🔗 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎨 Design & Aesthetic Vibe
+* **Typography:** Clean visual hierarchy using sharp corporate fonts.
+* **Color Palette:** Elite, trustworthy scheme utilizing deep navy tones paired with premium gold accents representing prestige and success.
+* **Component Framework:** Responsive, sleek geometric card matrix layouts optimized with hover dynamics.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack & Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project was built using a lightweight, fast frontend architecture:
+* **Framework:** React.js (via Vite for lightning-fast build speeds)
+* **Styling & Grid System:** Bootstrap 5 (Responsive layouts & modern UI components)
+* **Icons:** Lucide React (Premium, sharp vector iconography)
+* **Custom Styling:** Clean, vanilla CSS custom variables for consistent brand coloring.
+
+### 📁 Project Structure
+```text
+src/
+├── components/     # Reusable global UI elements (Navbar, Footer)
+├── sections/       # Modular page sections (Hero, About, Services, Contact)
+├── assets/         # Branding assets and graphics
+├── App.jsx         # Main layout wrapper assembling components
+└── main.jsx        # App entry point importing Bootstrap JS/CSS bundles
