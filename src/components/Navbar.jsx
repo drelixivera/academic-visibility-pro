@@ -37,7 +37,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="container-x flex items-center justify-between py-4">
-          {/* Left cluster: hamburger (mobile) + brand */}
+          {/* Left cluster: hamburger (mobile) + brand mark */}
           <div className="flex items-center gap-3">
             {/* Mobile hamburger — left of logo */}
             <button
@@ -59,7 +59,8 @@ export default function Navbar() {
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-navy text-gold font-serif text-lg">
                 A
               </span>
-              <span className="font-serif text-base text-navy tracking-tight sm:text-lg">
+              {/* Brand text — hidden on mobile, visible from md+ */}
+              <span className="hidden font-serif text-lg text-navy tracking-tight md:inline">
                 Academic Visibility Pro
               </span>
             </a>
@@ -79,15 +80,28 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop CTA */}
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary hidden md:inline-flex"
-          >
-            Book a Free Consultation
-          </a>
+          {/* CTA cluster: mobile short label + desktop full label */}
+          <div className="flex items-center gap-2">
+            {/* Mobile CTA — short label */}
+            <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary !px-4 !py-2 !text-xs md:hidden"
+            >
+              Free Consultation
+            </a>
+
+            {/* Desktop CTA — full label */}
+            <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary hidden md:inline-flex"
+            >
+              Book a Free Consultation
+            </a>
+          </div>
         </nav>
       </header>
 

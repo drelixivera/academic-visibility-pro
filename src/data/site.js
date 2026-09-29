@@ -17,7 +17,7 @@ export const site = {
 
   // Social
   socials: {
-    linkedin: "https://www.linkedin.com/",   // TODO: replace with real URL
-    facebook: "https://www.facebook.com/",   // TODO: replace with real URL
+    linkedin: "https://www.linkedin.com/in/adeyemi-sodiq-82a9413b5",
+    facebook: "https://www.facebook.com/",
   },
 };
