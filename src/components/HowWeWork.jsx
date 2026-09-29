@@ -1,4 +1,5 @@
 import { steps } from "../data/steps";
+import Reveal from "./ui/Reveal";
 import SectionHeading from "./ui/SectionHeading";
 
 export default function HowWeWork() {
@@ -19,22 +20,23 @@ export default function HowWeWork() {
           />
 
           {steps.map((step, index) => (
-            <li
-              key={step.number}
-              className="relative flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-10"
-            >
-              {/* Number bubble */}
-              <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-navy/10 bg-cream font-serif text-2xl text-navy shadow-card">
-                {step.number}
-              </div>
+            <li key={step.number} className="relative">
+              <Reveal delay={index}>
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-10">
+                  {/* Number bubble */}
+                  <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-navy/10 bg-cream font-serif text-2xl text-navy shadow-card">
+                    {step.number}
+                  </div>
 
-              {/* Content */}
-              <div className="card flex-1">
-                <h3 className="text-xl sm:text-2xl">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-body sm:text-base">
-                  {step.description}
-                </p>
-              </div>
+                  {/* Content */}
+                  <div className="card flex-1">
+                    <h3 className="text-xl sm:text-2xl">{step.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-body sm:text-base">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
             </li>
           ))}
         </ol>

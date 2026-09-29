@@ -1,3 +1,4 @@
+import HeroVisual from "./HeroVisual";
 import { whatsappLink } from "../utils/whatsapp";
 
 const stats = [
@@ -8,7 +9,10 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24">
+    <section
+      id="top"
+      className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24"
+    >
       {/* Subtle grid background */}
       <div
         aria-hidden="true"
@@ -19,34 +23,47 @@ export default function Hero() {
           backgroundSize: "40px 40px",
           maskImage:
             "radial-gradient(ellipse at top, black 40%, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse at top, black 40%, transparent 75%)",
         }}
       />
 
       <div className="container-x">
-        <span className="eyebrow">EB1A · O1 · NIW Profile Building</span>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10 lg:items-center">
+          {/* LEFT column — copy */}
+          <div className="lg:col-span-7">
+            <span className="eyebrow">EB1A · O1 · NIW Profile Building</span>
 
-        <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-          Build the academic profile that gets recognized.
-        </h1>
+            <h1 className="mt-6 max-w-3xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+              Build the academic profile that gets recognized.
+            </h1>
 
-        <p className="mt-6 max-w-2xl text-lg sm:text-xl text-body">
-          We help researchers, engineers, physicians, and executives strengthen
-          their academic impact, professional recognition, and global visibility —
-          so their EB1A, O1, or NIW petition is strong before they ever file.
-        </p>
+            <p className="mt-6 max-w-2xl text-lg text-body sm:text-xl">
+              We help researchers, engineers, physicians, and executives
+              strengthen their academic impact, professional recognition, and
+              global visibility — so their EB1A, O1, or NIW petition is strong
+              before they ever file.
+            </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a
-            href={whatsappLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary"
-          >
-            Book a Free Consultation
-          </a>
-          <a href="#services" className="btn btn-outline">
-            Explore Services
-          </a>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                Book a Free Consultation
+              </a>
+              <a href="#services" className="btn btn-outline">
+                Explore Services
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT column — visual (mobile: after copy; desktop: beside copy) */}
+          <div className="lg:col-span-5">
+            <HeroVisual />
+          </div>
         </div>
 
         {/* Stats strip */}

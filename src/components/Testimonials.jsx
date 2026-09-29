@@ -1,5 +1,6 @@
 import { testimonials } from "../data/testimonials";
 import TestimonialCard from "./TestimonialCard";
+import Reveal from "./ui/Reveal";
 import SectionHeading from "./ui/SectionHeading";
 
 export default function Testimonials() {
@@ -13,8 +14,10 @@ export default function Testimonials() {
         />
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
-          {testimonials.map((t) => (
-            <TestimonialCard key={t.id} testimonial={t} />
+          {testimonials.map((t, index) => (
+            <Reveal key={t.id} delay={index}>
+              <TestimonialCard testimonial={t} />
+            </Reveal>
           ))}
         </div>
       </div>
